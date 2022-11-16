@@ -32,7 +32,7 @@ class DiaryEntry:
         #        the given wpm.
 
     def reading_chunk(self, wpm, minutes):
-        length_of_chunk=wpm*minutes
+        length_of_chunk = wpm * minutes
         words = self._contents.split()
         chunk_start_point = self._read_so_far
         read_chunk = self._read_so_far + length_of_chunk
@@ -54,6 +54,3 @@ class DiaryEntry:
         # skipping what has already been read, until the contents is fully read.
         # The next call after that should restart from the beginning.
         
-
-# d=DiaryEntry('my diary','1 2 3 4 5 6')
-# print(d.reading_chunk(3,1))
